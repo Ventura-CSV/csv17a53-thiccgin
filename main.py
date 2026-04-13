@@ -9,6 +9,7 @@ def find_non_injective_pair(mapping: dict) -> tuple | None:
         if value in seen:
             return (seen[value], key)
         seen[value] = key
+    return None
     # === END TODO ===
 
 
@@ -16,7 +17,10 @@ def find_non_surjective_element(mapping: dict, target: set):
     """Return one target element with no input mapping to it, or None if surjective."""
     # === TODO ===
     # Your code here
-    pass
+    for item in target:
+        if item not in mapping.values():
+            return item
+    return None
     # === END TODO ===
 
 
