@@ -29,6 +29,8 @@ def my_floor(x: float) -> int:
     if x > 0:
         return int(x)
     else:
+        if x % 1 == 0:
+            return int(x)
         return (int(x) - 1)
     # === END TODO ===
 
